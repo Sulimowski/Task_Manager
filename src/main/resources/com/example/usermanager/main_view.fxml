@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.usermanager.MainController">
+
+    <top>
+        <HBox spacing="10">
+            <Button onAction="#handleAddUser" prefHeight="24.0" prefWidth="71.0" style="-fx-border-color: orange;" text="Add User" />
+            <Button onAction="#handleDeleteUser" style="-fx-border-color: orange;" text="Delete User" />
+        </HBox>
+    </top>
+
+    <center>
+        <HBox spacing="10">
+            <!-- User Table -->
+            <TableView fx:id="userTable" prefWidth="300" style="-fx-background-color: lightblue;" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="nameColumn" text="Name" />
+                </columns>
+            </TableView>
+
+            <!-- Task Management Section -->
+            <VBox spacing="10" HBox.hgrow="ALWAYS">
+                <HBox spacing="10">
+                    <Button onAction="#handleAddTask" style="-fx-border-color: orange;" text="Add Task" />
+                    <Button onAction="#handleEditTask" style="-fx-border-color: orange;" text="Edit Task" />
+                    <Button onAction="#handleDeleteTask" style="-fx-border-color: orange;" text="Delete Task" />
+                </HBox>
+
+                <!-- Task Table -->
+                <TableView fx:id="taskTable" style="-fx-background-color: lightblue;" VBox.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn fx:id="titleColumn" text="Title" />
+                        <TableColumn fx:id="deadlineColumn" text="Deadline" />
+                        <TableColumn fx:id="priorityColumn" text="Priority" />
+                    </columns>
+                </TableView>
+
+                <!-- Task Body Text Area -->
+                <TextArea fx:id="taskBodyTextArea" prefHeight="100" promptText="Selected Task:" VBox.vgrow="ALWAYS">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font></TextArea>
+            </VBox>
+        </HBox>
+    </center>
+
+    <bottom>
+        <HBox spacing="10">
+            <Button onAction="#handleSaveTasks" style="-fx-border-color: orange;" text="Save Tasks" />
+        </HBox>
+    </bottom>
+
+</BorderPane>
