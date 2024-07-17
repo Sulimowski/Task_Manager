@@ -15,3 +15,10 @@ User Manager is a JavaFX-based application designed to manage users and their ta
   ## Prerequisites
 - Java Development Kit (JDK) 8 or higher
 - JavaFX SDK (if using JDK versions prior to JDK 11)
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Sulimowski/Task_Manager.git
+   cd Task_Manager
+   
